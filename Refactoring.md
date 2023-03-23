@@ -34,5 +34,5 @@ Also,  if you want to check that a variable exists we can write it in the same c
     }
   }
 ```
-This code has less code lines and it is much easier to understand because it use basic concepts of Javascript. People only need to understand how crypto works with Express and what functions or modules, properties use. 
+This code has less code lines and it is much easier to understand because it use basic concepts of Javascript. People only need to understand how crypto works with Express and what functions,modules, or properties use. 
 
