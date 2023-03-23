@@ -14,3 +14,25 @@ This code has common js modules to determinate if the candidate has a partition 
 Secondly, it is convenient to validate if candidate is not a string we will converted to.
 
 Finally, if there is not a candidate, we will change it into 0. However, if there is something we will create a hash
+
+
+This new code is more readable with the original because of we are using conditionals in a propertly way. If you want to create nested conditionals it is better to use it with else if and not doing in the wrong way 
+
+```
+  if(){
+    if(){
+    }
+  }
+```
+
+Also,  if you want to check that a variable exists we can write it in the same conditional and not divided in two. On the other hand , it was much easier to delete else  and concatenate all the information in a single conditional
+
+
+```
+  if(event){
+    if(event.partitionKey){
+    }
+  }
+```
+This code has less code lines and it is much easier to understand because it use basic concepts of Javascript. People only need to understand how crypto works with Express and what functions or modules, properties use. 
+
