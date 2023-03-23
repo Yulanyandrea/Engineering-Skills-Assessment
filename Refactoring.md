@@ -9,7 +9,7 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
-This code has common js modules to determinate if the candidate has a partition key, we create a conditional to verify this action. That is why we are seeing if event has the property partitionKey. If the event not has this property we will create a hash using the sha3-512 algorithm of the crypto module by hashing the data. Also, this information is converted to text plane with JSON.stringigy().
+This code has common js modules to determinate if the candidate has a partition key, we create a conditional to verify this action. That is why we are seeing if event has the property partitionKey. If the event not has this property we will create a hash using the sha3-512 algorithm of the crypto module by hashing the data. Also, this information is converted to text plane with JSON.stringify().
 
 Secondly, it is convenient to validate if candidate is not a string we will converted to.
 
