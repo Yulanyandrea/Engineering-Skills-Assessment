@@ -31,8 +31,12 @@ Also,  if you want to check that a variable exists we can write it in the same c
 Original code
 
 ```
-  if(event){
-    if(event.partitionKey){
+ if (event) {
+    if (event.partitionKey) {
+      candidate = event.partitionKey;
+    } else {
+      const data = JSON.stringify(event);
+      candidate = crypto.createHash("sha3-512").update(data).digest("hex");
     }
   }
 ```
