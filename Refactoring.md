@@ -25,8 +25,10 @@ This new code is more readable with the original because of we are using conditi
   }
 ```
 
-Also,  if you want to check that a variable exists we can write it in the same conditional and not divided in two. On the other hand , it was much easier to delete else  and concatenate all the information in a single conditional
+Also,  if you want to check that a variable exists we can write it in the same conditional and not divided in two. On the other hand , it was much easier to delete else  and concatenate all the information in a one single conditional
 
+
+Original code
 
 ```
   if(event){
@@ -34,5 +36,20 @@ Also,  if you want to check that a variable exists we can write it in the same c
     }
   }
 ```
+
+
+
+Second code 
+
+```
+ if (event && event.partitionKey) {
+    candidate = event.partitionKey;
+  } else if (event) {
+    const data = JSON.stringify(event);
+    candidate = crypto.createHash("sha3-512").update(data).digest("hex");
+  }
+```
+
+
 This code has less code lines and it is much easier to understand because it use basic concepts of Javascript. People only need to understand how crypto works with Express and what functions,modules, or properties use. 
 
